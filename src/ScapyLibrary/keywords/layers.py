@@ -69,6 +69,9 @@ class LayersWrapper(object):
             print '****** Content of packet %s********' % str(index)
             packet.show()
 
+    def has_layer(self, packet, layer):
+        return packet.haslayer(layer)
+
     def get_keyword_names(self):
         return self.layers.keys() + LayersWrapper.OTHER_KEYWORDS
 
